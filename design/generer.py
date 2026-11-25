@@ -135,6 +135,34 @@ def carte_cotation():
     return page(corps, css)
 
 
+def carte_radar():
+    css = CSS_LARGE + """
+  .onde { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); border-radius:50%; border:1.5px solid rgba(46,90,67,.26); }
+  .balayage { position:absolute; left:50%; top:50%; width:208px; height:208px; transform:translate(-50%,-50%); border-radius:50%;
+              background:conic-gradient(from 300deg, rgba(184,138,78,0) 0deg, rgba(184,138,78,.34) 62deg, rgba(184,138,78,0) 63deg); }
+  .centre { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:46px; height:46px; border-radius:15px;
+            display:grid; place-items:center; color:#fff; background:linear-gradient(140deg, var(--vert) 0%, var(--vert2) 100%);
+            box-shadow:0 6px 14px rgba(46,90,67,.28); }
+  .lieu { position:absolute; display:inline-flex; align-items:center; gap:5px; padding:6px 10px; border-radius:999px; background:#fff;
+          border:1px solid #E8E1D6; box-shadow:0 6px 14px rgba(27,35,51,.10); font:600 12px/1 Inter; color:var(--vert); white-space:nowrap; }
+  .lieu.or { color:#8A6332; background:#FFF8EF; } .lieu svg { width:13px; height:13px; }"""
+    vis = f"""<div class='vis'>
+      <div class='onde' style='width:208px; height:208px'></div><div class='onde' style='width:140px; height:140px'></div><div class='onde' style='width:74px; height:74px'></div>
+      <div class='balayage'></div><div class='centre'>{ico('users', 22, 1.8)}</div>
+      <span class='lieu' style='left:26px; top:34px'>{ico('map-pin', 13, 2.2)}Concert</span>
+      <span class='lieu or' style='right:22px; top:66px'>Gratuit</span>
+      <span class='lieu' style='left:20px; bottom:58px'>{ico('map-pin', 13, 2.2)}Atelier</span>
+      <span class='lieu' style='right:30px; bottom:30px'>{ico('map-pin', 13, 2.2)}Expo</span></div>"""
+    corps = f"""<div id='c' class='marge'><div class='carte large lueur' style='width:880px; height:262px'>
+      <div class='txt'><div class='tag'>Prévention · Lien social</div>
+        <div class='titre'>Le Radar — Paris</div>
+        <div class='accroche'>Des sorties près de chez soi, chaque semaine, pour recréer du lien.</div>
+        <div class='desc'>Concerts, expos, stand-up, ateliers et plein air{NB}: une sélection vérifiée, souvent gratuite, avec le lien pour réserver. Parce que le lien social est au cœur de la prévention.</div>
+        <div class='bas'><div class='puces'><span class='puce'>Chaque semaine</span><span class='puce or'>Sorties gratuites</span></div>
+          <span class='cta plein'>Voir le Radar {ico('arrow-up-right', 16, 2.2)}</span></div></div>{vis}</div></div>"""
+    return page(corps, css)
+
+
 def carte_outil(tag, nom, desc, cta, icone):
     css = """.o { width:420px; height:240px; padding:24px 26px 22px; display:flex; flex-direction:column; gap:10px; }
       .o .haut { display:flex; justify-content:space-between; align-items:center; margin-bottom:4px; }
@@ -202,12 +230,13 @@ def composants():
         yield f"titre-{cle}-sombre", titre(texte, ic, True)
     yield "carte-veille-medicale", carte_veille()
     yield "carte-cotation", carte_cotation()
+    yield "carte-radar", carte_radar()
     yield "carte-sosie", carte_outil("Python · Mac", "Sosie", f"Travailler avec l'IA sur des bases de données de santé, sans jamais lui montrer les vraies{NB}: elle écrit ses scripts sur un sosie fictif.", "Site et démo", "shield-check")
     yield "carte-manuscript-agents", carte_outil("Plugin Claude", "Manuscript Agents", f"De la question de recherche à l'article publié{NB}: statistiques, EQUATOR, rédaction, relecture simulée et soumission.", "Installer", "feather")
     yield "carte-sous-titres", carte_outil("Application web", "Sous-titres", "Sous-titres en direct, traduits entre deux langues et attribués à chaque intervenant, pour suivre ou donner une intervention.", "Ouvrir", "captions")
     yield "carte-remboursement-glp1", carte_outil("Patients et soignants", "Remboursement GLP-1", "Savoir si l'on est concerné par le remboursement des traitements de l'obésité et trouver un centre spécialisé proche.", "Ouvrir", "badge-euro")
     yield "carte-activ", carte_projet("ACTIV", "Cofondateur", "Prescrire et orienter vers l'activité physique adaptée.", "Retenu par IMPULSE Healthcare", "footprints", "Découvrir", "AP-HP · Google.org · Bayes Impact")
-    yield "carte-sano", carte_projet("Sano", "Fondateur", "Outil numérique de prévention en santé.", "En développement", "sprout", None)
+    yield "carte-sano", carte_projet("Sano", "Fondateur", "Outil numérique de prévention en santé.", "En développement", "sprout", "Découvrir")
     yield "carte-boli", carte_projet("Boli", "Directeur scientifique et médical", "Accompagnement numérique des patients en situation d'obésité et de leurs soignants, entre les consultations.", f"DM classe{NB}I · marqué{NB}CE", "heart-pulse", "boli.care")
     yield "panneau-recherche", panneau(3, [
         ("brain-circuit", "Prédire la perte de poids sous sémaglutide", "Apprentissage automatique · Master 2 MODES (Université Paris Cité) · NutriOmics"),
