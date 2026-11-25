@@ -79,4 +79,6 @@ Membre de la SFNCM (groupes Jeunes et Communication), de la SFE et de l'ESE. Pou
 
 **Transparence.** Liens d'intérêts : directeur scientifique et médical de Boli (Boli Care SAS).
 
+**Propriété intellectuelle.** Mes outils sont libres d'utilisation, mais leur code, leurs textes et leur design restent protégés par le droit d'auteur : ni copie ni exploitation commerciale sans mon accord (Manuscript Agents est sous licence CC BY-NC 4.0). Envie de développer l'un de ces projets avec moi ? Écrivez-moi sur [LinkedIn](https://www.linkedin.com/in/baptiste-mazas-577219182/).
+
 <sub>Les contenus partagés ici ont une visée d'information et de formation ; ils ne remplacent pas une consultation médicale. Dernière mise à jour : novembre 2026.</sub>
