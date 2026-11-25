@@ -41,7 +41,11 @@
   <img src="assets/titre-projets-clair.png" width="100%" alt="Projets en santé numérique">
 </picture>
 
-<p align="center"><a href="https://activ-ordo.netlify.app/"><img src="assets/carte-activ.png" width="33.3%" alt="ACTIV (cofondateur) : prescrire et orienter vers l'activité physique adaptée. Retenu par le programme IMPULSE Healthcare (AP-HP, Google.org, Bayes Impact)."></a><img src="assets/carte-sano.png" width="33.3%" alt="Sano (fondateur) : outil numérique de prévention en santé, en développement."><a href="https://boli.care/"><img src="assets/carte-boli.png" width="33.3%" alt="Boli (directeur scientifique et médical) : accompagnement numérique des patients en situation d'obésité et de leurs soignants, entre les consultations. Dispositif médical de classe I, marqué CE."></a></p>
+<a href="https://baptistemazas-nutrition.github.io/le-radar-paris/"><img src="assets/carte-radar.png" width="100%" alt="Le Radar — Paris : chaque semaine, une sélection vérifiée de sorties près de chez soi (concerts, expos, stand-up, ateliers, plein air), souvent gratuites, avec le lien pour réserver. Parce que le lien social est au cœur de la prévention."></a>
+
+<p align="center"><a href="https://activ-ordo.netlify.app/"><img src="assets/carte-activ.png" width="33.3%" alt="ACTIV (cofondateur) : prescrire et orienter vers l'activité physique adaptée. Retenu par le programme IMPULSE Healthcare (AP-HP, Google.org, Bayes Impact)."></a><a href="https://baptistemazas-nutrition.github.io/sano/"><img src="assets/carte-sano.png" width="33.3%" alt="Sano (fondateur) : outil numérique de prévention en santé, en développement."></a><a href="https://boli.care/"><img src="assets/carte-boli.png" width="33.3%" alt="Boli (directeur scientifique et médical) : accompagnement numérique des patients en situation d'obésité et de leurs soignants, entre les consultations. Dispositif médical de classe I, marqué CE."></a></p>
+
+<p align="center"><sub>Code source : <a href="https://github.com/baptistemazas-nutrition/le-radar-paris">Le Radar</a> · <a href="https://github.com/baptistemazas-nutrition/sano">Sano</a></sub></p>
 
 <a id="recherche"></a>
 <picture>
